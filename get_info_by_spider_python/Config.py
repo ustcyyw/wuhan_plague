@@ -10,13 +10,13 @@ class Setting:
     """数据库相关配置：host user 及密码"""
     host = 'localhost'
     user = 'root'
-    password = 'yyw19950709'
+    password = '******'
     db = 'plague_info'
 
     """瘟疫信息首页url"""
     base_url = 'https://3g.dxy.cn/newh5/view/pneumonia'
 
-    """请求url的限定时间"""
+    """请求url的限定时间 单位：秒"""
     timeout = 10
 
     """url 请求头"""
@@ -28,6 +28,6 @@ class Setting:
     """存放瘟疫图示的文件夹地址"""
     path = 'C:/Users/Administrator/Desktop/plague/'
 
-    """获取信息的时间间隔"""
+    """获取信息的时间间隔 单位：秒"""
     loop_time = 3600
 
