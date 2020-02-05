@@ -62,11 +62,12 @@
 
 ****
 
-## 后续
+## 注意事项
 
-* 数据库的设计及介绍见 SQL_mysql 中
+* 数据库的设计及介绍见 [SQL_mysql](https://github.com/ustcyyw/wuhan_plague/tree/master/SQL_mysql) 中，必须开启数据库服务，配置好数据库，建好数据表才能运行本项目，否则数据库异常。
 * 丁香园的网页进行改版后可能需要更新 Plague_info.py 不要改变返回值的形式及类型，这样可以保证别的文件完全不需要更改
-* 觉得有用有意思的话给我一个star吧,请随意fork。欢迎讨论 微信Y154578009 /QQ154578009 :smile:
+
+    
 
 
 
