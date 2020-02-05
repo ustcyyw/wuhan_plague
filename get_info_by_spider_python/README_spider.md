@@ -15,8 +15,9 @@
 3. Plague_info.py ：解析提取页面数据
 4. Info_save.py：进行数据库操作的类及存储二进制文件的类
 5. assist_func.py：函数模块，与数据库交互
-6. main.py：本项目的函数入口
-7. test.py：本项目的单元测试模块
+6. select_data.py：提供一个可扩展的查询数据类
+7. main.py：本项目的函数入口
+8. test.py：本项目的单元测试模块
 
 ----
 
@@ -51,6 +52,16 @@
 2. `save_total_info(mySQL, total_info)`函数：单次存储全国信息进数据库
 3. `save_detailed_info(mySQL, detailed_info, count)`函数：单次存储各省区信息进数据库
 4. `get_info_once(count, time_now)`函数：单次从web获得数据后解析并存储信息进数据库
+
+#### select_data.py
+
+1. 构造函数传入要查询的表，及要查询的数据：column_index: 可变参数 可写 1 2 3 4。至少选择一列，至多选择4列，参数按从小到大的顺序
+
+2. `get_base_sql(self)`函数：构造得到sql语句
+
+3. `get_data(self, sql)`函数：执行sql语句，得到查询结果并存放在`self.data`中
+
+    **此基础类可以扩展数据的进一步处理，也可通过继承创建查询指定数据的类**
 
 #### main.py
 
