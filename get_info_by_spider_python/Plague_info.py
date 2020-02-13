@@ -24,7 +24,7 @@ class PlagueInfo:
         content = self.soup.find('script', id='getAreaStat').text
         march_data = re.search("window\\.getAreaStat = \\[(.*)\\]", content)
         str_data = march_data.group(1)
-        pattern = re.compile('"provinceShortName":"(.*?)","confirmedCount":(\\d*?),'
+        pattern = re.compile('"provinceShortName":"(.*?)","currentConfirmedCount":\\d*?,"confirmedCount":(\\d*?),'
                              '"suspectedCount":(\\d*?),"curedCount":(\\d*?),"deadCount":(\\d*?),')
         province_datas = pattern.findall(str_data)
         print('check!!', province_datas)
