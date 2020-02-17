@@ -6,11 +6,11 @@
 
 #### 1.全国疫情信息表 total_info
 
-![total_info.png](https://github.com/ustcyyw/wuhan_plague/blob/master/SQL_mysql/total_info.png?raw=true)
+![total_info.png](https://github.com/ustcyyw/wuhan_plague/blob/master/version1.1/SQL_mysql/total_info.png?raw=true)
 
 #### 2.省区疫情信息表 detailed_info
 
-![detailed_info.png](https://github.com/ustcyyw/wuhan_plague/blob/master/SQL_mysql/detailed_info.png?raw=true)
+![detailed_info.png](https://github.com/ustcyyw/wuhan_plague/blob/master/version1.1/SQL_mysql/detailed_info.png?raw=true)
 
 ---
 

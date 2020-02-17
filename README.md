@@ -6,7 +6,11 @@
 
 完整项目包括数据的爬取，数据的存储，及数据的读取。
 
-数据爬取及存储使用python进行编写，在本仓库[get_info_by_spider_python](https://github.com/ustcyyw/wuhan_plague/tree/master/get_info_by_spider_python)中。DBMS使用mysql，表格结果及部分数据在本仓库[SQL_mysql](https://github.com/ustcyyw/wuhan_plague/tree/master/SQL_mysql)中。web后端使用java编写,提供几个查看数据的非常方便的接口，放在另外一个仓库 wuhan_plague_web 中。
+数据爬取及存储使用python进行编写，在本仓库各个版本文件下的get_info_by_spider_python文件夹中。
+
+DBMS使用mysql，表格结果及部分数据在本仓库各个版本文件下的SQL_mysql文件夹中。
+
+web后端使用java编写,提供几个查看数据的非常方便的接口，放在另外一个仓库 wuhan_plague_web 中。
 
 ## 项目目的
 
@@ -17,6 +21,7 @@
 ## 更改日志
 
 * 2020年2月13日11:27:33 更改Plague_info.py第27~28行。修改原因：数据来源网站细微变更，原正则表达式匹配失败。
+* 2020年2月17日17:17:19 项目添加世界各国信息爬取功能，将原版本部分修改后放入文件[version1.1](https://github.com/ustcyyw/wuhan_plague/tree/master/version1.1)。
 
 ## 其它
 
