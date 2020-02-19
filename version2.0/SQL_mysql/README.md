@@ -6,11 +6,11 @@
 
 #### 1.全国疫情信息表 china_total_info
 
-
+![total_info.png](https://github.com/ustcyyw/wuhan_plague/blob/master/version2.0/SQL_mysql/total_info.png?raw=true)
 
 #### 2.省区疫情信息表 china_detail_info
 
-
+![detailed_info.png](https://github.com/ustcyyw/wuhan_plague/blob/master/version2.0/SQL_mysql/detailed_info.png?raw=true)
 
 #### 3.世界疫情信息表 world_detail_info
 
@@ -24,7 +24,7 @@
 
 ## 数据库创建及数据导入
 
-本项目使用的DBMS是 mysql，可以按上一节中的表格结构自己创建（使用的软件是Navicat），也可以直接运行本文件夹中的两个.sql文件,文件中包括截止2020年2月5日17点的数据的批量导入。
+本项目使用的DBMS是 mysql，可以按上一节中的表格结构自己创建（使用的软件是Navicat），也可以直接运行本文件夹中的四个.sql文件,文件中包括截止2020年2月19日10点的数据的批量导入。
 
 ---
 

@@ -22,6 +22,7 @@ web后端使用java编写,提供几个查看数据的非常方便的接口，放
 
 * 2020年2月13日11:27:33 更改Plague_info.py第27~28行。修改原因：数据来源网站细微变更，原正则表达式匹配失败。
 * 2020年2月17日17:17:19 项目添加世界各国信息爬取功能，将原版本部分修改后放入文件[version1.1](https://github.com/ustcyyw/wuhan_plague/tree/master/version1.1)。
+* 2020年2月19日22:58:33 新版本上传完成，放入文件[version2.0](https://github.com/ustcyyw/wuhan_plague/tree/master/version2.0)
 
 ## 其它
 
