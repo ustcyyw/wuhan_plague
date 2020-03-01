@@ -10,7 +10,7 @@ class Setting:
     """数据库相关配置：host user 及密码"""
     host = 'localhost'
     user = 'root'
-    password = 'yyw19950709'
+    password = ''
     db = 'plague_info'
 
     """瘟疫信息首页url"""
