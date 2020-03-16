@@ -55,6 +55,8 @@ class PlagueInfo:
         print('check!!', area_datas)
         result_dict = {}
         for area_data in area_datas:
+            if area_data[0] == "中国":
+                continue
             area = area_data[0]
             diagnosis_num = int(area_data[1])
             suspect_num = int(area_data[2])
