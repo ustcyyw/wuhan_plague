@@ -46,8 +46,8 @@ class PlagueInfo:
         获取全球各个国家及地区的信息
         :return:
         """
-        content = self.soup.find('script', id='getListByCountryTypeService2undefined').text
-        march_data = re.search("window\\.getListByCountryTypeService2undefined = \\[(.*)\\]", content)
+        content = self.soup.find('script', id='getListByCountryTypeService2true').text
+        march_data = re.search("window\\.getListByCountryTypeService2true = \\[(.*)\\]", content)
         str_data = march_data.group(1)
         pattern = re.compile('"provinceName":"(.*?)".*?"confirmedCount":(\\d*?),'
                              '"suspectedCount":(\\d*?),"curedCount":(\\d*?),"deadCount":(\\d*?),')
