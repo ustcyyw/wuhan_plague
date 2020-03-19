@@ -31,4 +31,4 @@
 ## 注意事项
 
 * 要允许爬虫项目，需要打开自己的mysql服务，且在设置文件中设置自己的数据库信息，并且创建好上述结构的两个表格。
-* 表格名称不可更改，需要命名为`total_info`及`detailed_info`
+* 表格名称不可更改，需要命名为`china_total_info`及`china_detail_info`及`world_total_info`及`world_detail_info`
