@@ -49,7 +49,7 @@ class PlagueInfo:
         content = self.soup.find('script', id='getListByCountryTypeService2true').text
         march_data = re.search("window\\.getListByCountryTypeService2true = \\[(.*)\\]", content)
         str_data = march_data.group(1)
-        pattern = re.compile('"provinceName":"(.*?)".*?"confirmedCount":(\\d*?),'
+        pattern = re.compile('"provinceName":"(.*?)".*?"confirmedCount":(\\d*?),.*?'
                              '"suspectedCount":(\\d*?),"curedCount":(\\d*?),"deadCount":(\\d*?),')
         area_datas = pattern.findall(str_data)
         print('check!!', area_datas)
