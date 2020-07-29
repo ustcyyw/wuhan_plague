@@ -28,22 +28,29 @@ def test_decorator(function):
 
 
 @test_decorator
+def test_get_response_str():
+    response = URLDealer(Setting.base_url, Setting.timeout).get_response().text
+    print(str(response))
+
+
+@test_decorator
 def test_world_info():
-    soup = URLDealer(Setting.base_url, Setting.timeout).get_soup()
-    plague_info = PlagueInfo(soup)
+    text = URLDealer(Setting.base_url, Setting.timeout).get_response_text()
+    plague_info = PlagueInfo(text)
     return plague_info.world_info()
 
 
 @test_decorator
 def test_china_info():
-    soup = URLDealer(Setting.base_url, Setting.timeout).get_soup()
-    plague_info = PlagueInfo(soup)
+    text = URLDealer(Setting.base_url, Setting.timeout).get_response_text()
+    plague_info = PlagueInfo(text)
     return plague_info.china_info()
 
 
 def main():
-    test_china_info()
-    # test_world_info()
+    # test_get_response_str()
+    # test_china_info()
+    test_world_info()
 
 
 if __name__ == '__main__':

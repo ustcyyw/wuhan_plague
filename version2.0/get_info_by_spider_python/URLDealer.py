@@ -43,6 +43,9 @@ class URLDealer:
                                                                             datetime.datetime.now()))
                     time.sleep(1)
 
+    def get_response_text(self):
+        return self.get_response().text
+
     def get_soup(self):
         """
         获得url的response

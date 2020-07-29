@@ -13,16 +13,18 @@ class PlagueInfo:
     属于页面解析类 完全不可扩展
     """
 
-    def __init__(self, soup):
-        self.soup_text = str(soup)
+    def __init__(self, text):
+        if not isinstance(text, str):
+            self.text = str(text)
+        else:
+            self.text = text;
 
     def china_info(self):
         """
         获得全国分省区的瘟疫情况
         :return:
         """
-        # content = self.soup.find('script', id='getAreaStat').text
-        march_data = re.search("window\\.getAreaStat = \\[(.*)\\]", self.soup_text)
+        march_data = re.search("window\\.getAreaStat = \\[(.*)\\]", self.text)
         str_data = march_data.group(1)
         pattern = re.compile('"provinceShortName":"(.*?)","currentConfirmedCount":\\d*?,"confirmedCount":(\\d*?),'
                              '"suspectedCount":(\\d*?),"curedCount":(\\d*?),"deadCount":(\\d*?),')
@@ -46,23 +48,21 @@ class PlagueInfo:
         获取全球各个国家及地区的信息
         :return:
         """
-        # print(str(self.soup))
-        # content = self.soup.find('script', id='getListByCountryTypeService2true').text
-        march_data = re.search("window\\.getListByCountryTypeService2true = \\[(.*)\\]", self.soup_text)
+        march_data = re.search("window\\.getListByCountryTypeService2true = \\[(.*)\\]", self.text)
         str_data = march_data.group(1)
-        pattern = re.compile('"provinceName":"(.*?)".*?"confirmedCount":(\\d*?),.*?'
+        pattern = re.compile('"provinceName":"(.*?)","provinceShortName":"(.*?)".*?"confirmedCount":(\\d*?),.*?'
                              '"suspectedCount":(\\d*?),"curedCount":(\\d*?),"deadCount":(\\d*?),')
         area_datas = pattern.findall(str_data)
         print('check!!', area_datas)
         result_dict = {}
         for area_data in area_datas:
-            if area_data[0] == "中国":
+            if area_data[1] != "":
                 continue
             area = area_data[0]
-            diagnosis_num = int(area_data[1])
-            suspect_num = int(area_data[2])
-            cure_num = int(area_data[3])
-            death_num = int(area_data[4])
+            diagnosis_num = int(area_data[2])
+            suspect_num = int(area_data[3])
+            cure_num = int(area_data[4])
+            death_num = int(area_data[5])
 
             num_dict = {'确诊': diagnosis_num, '疑似': suspect_num, '死亡': death_num, '治愈': cure_num}
             result_dict[area] = num_dict
