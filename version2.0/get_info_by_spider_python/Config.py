@@ -14,15 +14,15 @@ class Setting:
     db = 'plague_info'
 
     """瘟疫信息首页url"""
-    base_url = 'https://3g.dxy.cn/newh5/view/pneumonia'
+    base_url = 'https://ncov.dxy.cn/ncovh5/view/pneumonia'
 
     """请求url的限定时间"""
     timeout = 10
 
     """url 请求头"""
     headers = {
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/' \
-                      '537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6)'
+                      ' AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
     }
 
     """存放瘟疫图示的文件夹地址"""

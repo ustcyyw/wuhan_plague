@@ -14,15 +14,15 @@ class PlagueInfo:
     """
 
     def __init__(self, soup):
-        self.soup = soup
+        self.soup_text = str(soup)
 
     def china_info(self):
         """
         获得全国分省区的瘟疫情况
         :return:
         """
-        content = self.soup.find('script', id='getAreaStat').text
-        march_data = re.search("window\\.getAreaStat = \\[(.*)\\]", content)
+        # content = self.soup.find('script', id='getAreaStat').text
+        march_data = re.search("window\\.getAreaStat = \\[(.*)\\]", self.soup_text)
         str_data = march_data.group(1)
         pattern = re.compile('"provinceShortName":"(.*?)","currentConfirmedCount":\\d*?,"confirmedCount":(\\d*?),'
                              '"suspectedCount":(\\d*?),"curedCount":(\\d*?),"deadCount":(\\d*?),')
@@ -46,8 +46,9 @@ class PlagueInfo:
         获取全球各个国家及地区的信息
         :return:
         """
-        content = self.soup.find('script', id='getListByCountryTypeService2true').text
-        march_data = re.search("window\\.getListByCountryTypeService2true = \\[(.*)\\]", content)
+        # print(str(self.soup))
+        # content = self.soup.find('script', id='getListByCountryTypeService2true').text
+        march_data = re.search("window\\.getListByCountryTypeService2true = \\[(.*)\\]", self.soup_text)
         str_data = march_data.group(1)
         pattern = re.compile('"provinceName":"(.*?)".*?"confirmedCount":(\\d*?),.*?'
                              '"suspectedCount":(\\d*?),"curedCount":(\\d*?),"deadCount":(\\d*?),')

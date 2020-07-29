@@ -34,8 +34,16 @@ def test_world_info():
     return plague_info.world_info()
 
 
+@test_decorator
+def test_china_info():
+    soup = URLDealer(Setting.base_url, Setting.timeout).get_soup()
+    plague_info = PlagueInfo(soup)
+    return plague_info.china_info()
+
+
 def main():
-    test_world_info()
+    test_china_info()
+    # test_world_info()
 
 
 if __name__ == '__main__':
